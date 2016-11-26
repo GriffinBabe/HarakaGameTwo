@@ -14,7 +14,7 @@ import be.haraka.game2.net.GameClient;
 import be.haraka.game2.net.packets.Packet00Login;
 import be.haraka.game2.net.packets.Packet01Disconnect;
 
-public class LocalPlayer implements InputProcessor{
+public class LocalPlayer implements InputProcessor {
 	
 	//Networking elements
 	private GameClient socketClient;
@@ -29,12 +29,10 @@ public class LocalPlayer implements InputProcessor{
 	public PlayerCollision localPlayerCollision;
 	public boolean playerCenteredCamera;
 	public String username;
-	public int discoCounter;
 	
 	public LocalPlayer(String name) {
 
 		//Stats
-		discoCounter = 0;
 		username = name;
 		pos = new Vector2(0,0);
 		speed = 2 * 60;
@@ -53,8 +51,7 @@ public class LocalPlayer implements InputProcessor{
 	}
 	
 	//Player Loop
-	public void update(float delta)
-	{
+	public void update(float delta) {
 		oldPos.set(pos);
 		pos.x = pos.x + velocity.x * delta;
 		pos.y = pos.y + velocity.y * delta;
@@ -79,10 +76,8 @@ public class LocalPlayer implements InputProcessor{
 		
 	}
 
-	public boolean keyDown(int keycode) 
-	{
-		switch(keycode)
-		{
+	public boolean keyDown(int keycode) {
+		switch(keycode){
 		case Keys.Z:
 			velocity.y = speed;
 			break;
@@ -108,10 +103,8 @@ public class LocalPlayer implements InputProcessor{
 		return true;
 	}
 
-	public boolean keyUp(int keycode) 
-	{
-		switch(keycode)
-		{
+	public boolean keyUp(int keycode) {
+		switch(keycode){
 		case Keys.Z:
 			velocity.y = 0;
 			break;
@@ -129,14 +122,12 @@ public class LocalPlayer implements InputProcessor{
 	}
 
 
-	public boolean keyTyped(char character) 
-	{
+	public boolean keyTyped(char character) {
 		return false;
 	}
 
 
-	public boolean touchDown(int screenX, int screenY, int pointer, int button) 
-	{
+	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (button == Buttons.LEFT){
         	pos.x = 0;
         	pos.y = 0;
@@ -156,27 +147,22 @@ public class LocalPlayer implements InputProcessor{
 	}
 
 
-	public boolean touchUp(int screenX, int screenY, int pointer, int button) 
-	{
+	public boolean touchUp(int screenX, int screenY, int pointer, int button) {
 		return false;
 	}
 
 
-	public boolean touchDragged(int screenX, int screenY, int pointer) 
-	{
+	public boolean touchDragged(int screenX, int screenY, int pointer) {
 		return false;
 	}
 
 
-	public boolean mouseMoved(int screenX, int screenY)
-	{
-
+	public boolean mouseMoved(int screenX, int screenY){
 		return false;
 	}
 
 
-	public boolean scrolled(int amount) 
-	{
+	public boolean scrolled(int amount) {
 		return false;
 	}
 	
@@ -189,10 +175,11 @@ public class LocalPlayer implements InputProcessor{
 	
 
 	public void disconnect() {
-		discoCounter++;
-		isPlayerConnected = false;
-		System.out.println("Aptempting to disconnect" + discoCounter);
-		Packet01Disconnect disconnectPacket = new Packet01Disconnect(username);
-		disconnectPacket.writeData(socketClient);
+		if(JOptionPane.showConfirmDialog(null, "Sure u wanna leave kiddo?") == JOptionPane.YES_OPTION){
+			isPlayerConnected = false;
+			Packet01Disconnect disconnectPacket = new Packet01Disconnect(username);
+			disconnectPacket.writeData(socketClient);
+		}
+		
 	}
 }

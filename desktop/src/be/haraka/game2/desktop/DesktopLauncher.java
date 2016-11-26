@@ -12,6 +12,7 @@ public class DesktopLauncher {
 		cfg.width =1280;
 		cfg.height = 720;
 		cfg.resizable = true;
+		cfg.forceExit = true;
 		
 		new LwjglApplication(new GameClass(), cfg);
 		

@@ -33,6 +33,11 @@ public class Play implements Screen {
 	public void render(float delta)
 	{
 		
+		if (!localPlayer.isPlayerConnected){
+			System.out.println("Quitting game due to disconnection");
+			Gdx.app.exit();
+		}
+		
 		//Goes to localPlayer loop part
 		localPlayer.update(delta);
 		
@@ -49,9 +54,6 @@ public class Play implements Screen {
 		batch.setProjectionMatrix(camera.combined);
 		batch.draw(localPlayer.texture,localPlayer.pos.x,localPlayer.pos.y);
 		font.draw(batch, localPlayerName, localPlayer.pos.x-25, localPlayer.pos.y+localPlayer.texture.getHeight()+20);
-		if (localPlayer.isPlayerConnected = false) {
-			dispose();
-		}
 		batch.end();
 
 	}
