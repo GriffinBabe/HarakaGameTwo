@@ -8,10 +8,11 @@ import be.haraka.game2.screens.Play;
 
 public class GameClass extends Game 
 {
+	public Screen play = new Play();
 
 	public void create () 
 	{
-		setScreen((Screen) new Play());
+		setScreen(play);
 	}
 
 	public void render () 

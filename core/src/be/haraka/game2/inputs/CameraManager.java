@@ -7,46 +7,46 @@ import be.haraka.game2.screens.Play;
 
 public class CameraManager
 {
-	public static void cameraUpdate(float delta)
+	public void cameraUpdate(float delta,OrthographicCamera camera,LocalPlayer localPlayer)
 	{
 		//Screen Borders camera scroll
-		if (!LocalPlayer.playerCenteredCamera)
+		if (!localPlayer.playerCenteredCamera)
 		{
 			if (Gdx.input.getX() < 50)
 			{
-				Play.camera.translate(-8,0,0);
+				camera.translate(-8,0,0);
 			}
 			
 			else if (Gdx.input.getX() > Gdx.graphics.getWidth() - 50)
 			{
-				Play.camera.translate(8,0,0);
+				camera.translate(8,0,0);
 			}
 			
 			if (Gdx.input.getY() < 50)
 			{
-				Play.camera.translate(0,8,0);
+				camera.translate(0,8,0);
 			}
 			
 			else if (Gdx.input.getY() > Gdx.graphics.getHeight() - 50)
 			{
-				Play.camera.translate(0,-8,0);
+				camera.translate(0,-8,0);
 			}
 		}
 		
 		else
 		{
-			Play.camera.position.set(LocalPlayer.pos.x,LocalPlayer.pos.y,0);
+			camera.position.set(localPlayer.pos.x,localPlayer.pos.y,0);
 		}
 		
-		Play.camera.update();
+		camera.update();
 	}
 	
-	public static void cameraResize(int width, int height)
+	public void cameraResize(int width, int height,OrthographicCamera camera)
 	{
-		Play.camera.viewportWidth = width;
-		Play.camera.viewportHeight = height;
-		Play.camera.position.set(Gdx.graphics.getWidth()/2,0,0);
-		Play.camera.update();
+		camera.viewportWidth = width;
+		camera.viewportHeight = height;
+		camera.position.set(Gdx.graphics.getWidth()/2,0,0);
+		camera.update();
 	}
 	
 }

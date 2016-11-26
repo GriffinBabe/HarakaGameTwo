@@ -1,11 +1,11 @@
 package be.haraka.game2.map;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.IsometricTiledMapRenderer;
-import be.haraka.game2.screens.Play;
 
 public class MapManager 
 {
@@ -19,10 +19,10 @@ public class MapManager
 		renderer = new IsometricTiledMapRenderer(map);
 	}
 	
-	public void render()
+	public void render(OrthographicCamera camera)
 	{
 		renderer.render();
-		renderer.setView(Play.camera);
+		renderer.setView(camera);
 	}
 	
 	public static float getMapWidth()

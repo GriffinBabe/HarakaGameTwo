@@ -19,10 +19,10 @@ public class PlayerCollision
 		collisionLayer = (TiledMapTileLayer) MapManager.map.getLayers().get("collisionlayer");
 	}
 	
-	public static boolean playerCollisionCheck()
+	public static boolean playerCollisionCheck(LocalPlayer localPlayer)
 	{
 		//Checks is there is the "blocked" the blocked statement in player Tile position, there's a bug I can't find that mooves the collision layer 2 tiled before in y axis, so I remoove 2
-		if ( collisionLayer.getCell((int) MapUtil.gameToIso(LocalPlayer.pos).x, (int) MapUtil.gameToIso(LocalPlayer.pos).y).getTile().getProperties().containsKey("blocked") )
+		if ( collisionLayer.getCell((int) MapUtil.gameToIso(localPlayer.pos).x, (int) MapUtil.gameToIso(localPlayer.pos).y).getTile().getProperties().containsKey("blocked") )
 		{
 			return true;
 		}
