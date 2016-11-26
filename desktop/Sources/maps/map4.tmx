@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="snowWIP" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="snowWIP.png" width="512" height="512"/>
+  <tile id="196">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="197">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="212">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="213">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="228">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="229">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="244">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="245">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Calque de Tile 1" width="15" height="15">
+  <data encoding="csv">
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,11,11,11,16,16,16,11,11,11,11,11,11,11,11,
+32,32,11,16,16,11,16,11,11,32,32,32,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+32,11,11,11,11,11,11,11,11,11,16,11,11,11,11,
+11,11,11,16,16,11,16,11,11,11,11,16,16,11,11,
+11,11,11,11,16,11,32,32,32,11,11,32,11,11,11,
+11,11,30,11,16,16,11,11,11,11,11,11,11,11,11,
+11,11,11,11,16,11,11,11,16,11,11,11,11,11,11,
+11,16,11,16,16,11,11,16,16,32,11,11,32,11,11,
+11,16,16,16,32,32,11,11,11,32,11,11,11,11,11,
+11,11,16,11,32,16,16,11,11,11,11,11,11,11,11,
+11,11,16,16,16,16,16,16,11,11,11,11,11,11,11,
+11,11,11,11,11,11,11,11,32,16,16,11,11,11,11,
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11
+</data>
+ </layer>
+ <layer name="Route" width="15" height="15">
+  <data encoding="csv">
+0,0,0,0,0,62,63,64,0,0,225,236,237,228,0,
+0,0,0,0,0,62,63,64,0,0,241,252,253,244,0,
+0,0,0,0,0,62,63,64,0,0,0,0,0,0,0,
+0,0,0,0,0,62,63,64,0,0,0,0,0,0,0,
+0,0,0,0,119,62,63,64,0,0,0,0,0,0,0,
+0,0,0,0,136,62,63,64,0,0,0,0,0,0,0,
+0,0,0,0,0,62,63,64,0,0,0,0,0,0,0,
+0,0,0,0,0,62,63,61,47,47,47,47,47,47,47,
+0,0,0,0,0,62,63,63,92,92,92,92,92,92,92,
+0,197,198,0,0,78,79,79,79,79,79,79,79,79,79,
+0,213,214,0,0,0,0,0,0,0,0,0,0,0,0,
+0,229,230,0,0,0,0,0,0,0,0,0,0,0,0,
+0,245,246,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
