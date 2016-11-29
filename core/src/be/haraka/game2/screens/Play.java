@@ -15,6 +15,7 @@ import com.badlogic.gdx.maps.tiled.renderers.IsometricTiledMapRenderer;
 import be.haraka.game2.entities.LocalPlayer;
 import be.haraka.game2.inputs.CameraManager;
 import be.haraka.game2.map.MapManager;
+import be.haraka.game2.net.packets.Packet01Disconnect;
 
 
 public class Play implements Screen {
@@ -97,8 +98,12 @@ public class Play implements Screen {
 	
 	public void dispose()
 	{
-		MapManager.map.dispose();
-		renderer.dispose();
+		if(JOptionPane.showConfirmDialog(null, "Sure u wanna leave kiddo?") == JOptionPane.YES_OPTION){
+			localPlayer.isPlayerConnected = false;
+			Packet01Disconnect disconnectPacket = new Packet01Disconnect(localPlayer.username);
+			disconnectPacket.writeData(localPlayer.socketClient);
+		}
+		
 	}
 
 

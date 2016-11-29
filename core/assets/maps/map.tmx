@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="15" height="15" tilewidth="64" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="snowplains_tileset_final" tilewidth="64" tileheight="32" tilecount="1536" columns="16">
+  <image source="snowplains_tileset_final.png" width="1024" height="3072"/>
+  <tile id="88">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="202">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="218">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="234">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="1332">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="1333">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="1348">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+  <tile id="1349">
+   <properties>
+    <property name="blocked" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Ground" width="15" height="15">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1073741841,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1073741841,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1073741841,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1073741841,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1073741841,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1073741841,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,17,1073741841,1,1,1,1,1,
+1,1,1,1,1,1,1,1,17,1073741841,1,1,1,1,1,
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer name="Tente" width="15" height="15">
+  <data encoding="csv">
+95,138,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,137,154,95,95,95,95,95,95,95,95,95,95,95,95,
+95,137,153,95,95,95,95,95,95,95,95,95,95,95,95,
+95,137,153,95,95,95,95,95,95,95,95,95,95,95,95,
+95,137,153,95,95,95,95,95,95,95,95,95,95,95,95,
+95,137,153,95,95,89,106,95,95,95,95,95,95,95,95,
+95,95,153,95,95,95,105,122,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,121,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
+95,95,95,95,95,95,95,95,95,95,95,95,95,95,95
+</data>
+ </layer>
+</map>

@@ -17,7 +17,7 @@ import be.haraka.game2.net.packets.Packet01Disconnect;
 public class LocalPlayer implements InputProcessor {
 	
 	//Networking elements
-	private GameClient socketClient;
+	public GameClient socketClient;
 	public boolean isPlayerConnected;
 	
 	//Player stats
@@ -37,6 +37,7 @@ public class LocalPlayer implements InputProcessor {
 		pos = new Vector2(0,0);
 		speed = 2 * 60;
 		texture = new Texture(Gdx.files.internal("Sources/entities/player3.png"));
+		//texture = new Texture("entities/player3.png");
 		velocity = new Vector2();
 		oldPos = new Vector2(pos.x,pos.y);
 		localPlayerCollision = new PlayerCollision();

@@ -16,6 +16,7 @@ public class MapManager
 	public MapManager() 
 	{
 		map = new TmxMapLoader().load(Gdx.files.internal("Sources/maps/map6.tmx").file().getAbsolutePath());
+		//map = new TmxMapLoader().load("maps/map6.tmx");
 		renderer = new IsometricTiledMapRenderer(map);
 	}
 	
